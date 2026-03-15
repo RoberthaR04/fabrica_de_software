@@ -16,7 +16,7 @@
     <style>
         /* Estilos Globais */
         body {
-            background-image: url("Imagens/fotoprincipal.jpg");
+            background-color: rgb(151, 255, 131);
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -40,8 +40,14 @@
             font-family: monospace;
         }
 
+        .barra-nav {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
 
-        /* Estilo dos cards */
         .card {
             background-color: #fdfdfd;
             border: none;
@@ -66,26 +72,22 @@
 
 <body>
     <header class="capa">
-        <img src=".../Imagens/meuambientecapa.jpg" alt="Logo" class="logo">
         <h1>Meu ambiente</h1>
     </header>
-    <nav class="navbar navbar-dark bg-success">
-        <div class="container">
-            <div>
+    <nav class="navbar">
+        <div class="container justify-content-center">
 
-                <a href="index.html" class="btn btn-light">Início</a>
-                <a href="Lista.html" class="btn btn-light">Categorias</a>
-                <a href="Indicadores.html" class="btn btn-light">Indicadores</a>
-                <a href="Denuncias.html" class="btn btn-light">Denunciar</a>
+            <a href="../Inicio/Inicio.html" class="btn btn-success mx-2">Início</a>
+            <a href="../Lista/Lista.html" class="btn btn-success mx-2">Categorias</a>
+            <a href="../Visualizacao/Indicadores.html" class="btn btn-success mx-2">Indicadores</a>
+            <a href="../Edit/Denuncias.html" class="btn btn-success mx-2">Denunciar</a>
 
-            </div>
         </div>
     </nav>
     <div class="container">
         <div class="row row-cols-1 row-cols-md-3 g-4">
             <div class="col">
                 <div class="card h-100">
-                    <img src="fabrica_de_software\Meu Ambiente\Imagens\ocean.png" class="card-img-top" alt="oceano">
                     <div class="card-body">
                         <h5 class="card-title">Projeto quer limpar plástico dos oceanos</h5>
                         <p class="card-text">Um projeto da organização The Ocean Cleanup, criado por Boyan Slat,
@@ -97,8 +99,6 @@
             </div>
             <div class="col">
                 <div class="card h-100">
-                    <img src="fabrica_de_software\Meu Ambiente\Imagens\cientista.png" class="card-img-top"
-                        alt="Cientistas">
                     <div class="card-body">
                         <h5 class="card-title">Cientistas transformam plástico em vinagre</h5>
                         <p class="card-text">Pesquisadores desenvolveram uma tecnologia que utiliza luz solar para
@@ -110,7 +110,6 @@
             </div>
             <div class="col">
                 <div class="card h-100">
-                    <img src="fabrica_de_software\Meu Ambiente\Imagens\londres.png" class="card-img-top" alt="Londres">
                     <div class="card-body">
                         <h5 class="card-title">Londres investe em energia produzida a partir do lixo</h5>
                         <p class="card-text">A cidade de Londres está ampliando usinas que transformam lixo em energia

@@ -19,7 +19,7 @@
             padding: 0;
             width: 100%;
             min-height: 100vh;
-            background-color: #77fa8f;
+            background-color: rgb(151, 255, 131);
             font-family: Arial, Helvetica, sans-serif;
             color: #020202;
         }
@@ -42,26 +42,49 @@
             font-family: monospace;
         }
 
+        .barra-nav {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
 
-        /* Estilo dos cards */
+        .lista-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
         .card {
-            background-color: #fdfdfd;
+            width: 100%;
+            max-width: 800px;
+            padding: 25px;
+            border-radius: 15px;
             border: none;
-            border-radius: 10px;
-            overflow: hidden;
-            transition: transform 0.3s, box-shadow 0.3s;
-            position: center;
-            height: 50%;
-            width: 400px;
-            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
         }
 
-        .container {
-            margin-top: 30px;
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
         }
 
-        .btn-primary {
-            position: relative;
+        .card:active {
+            background-color: #d8ffd6;
+        }
+
+        .card-body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-body .btn {
+            align-self: flex-end;
+            margin-top: 15px;
         }
     </style>
 </head>
@@ -70,133 +93,83 @@
     <header>
         <h1>Categorias</h1>
     </header>
-    <nav class="navbar navbar-dark bg-success">
-        <div class="container">
-            <div>
+    <nav class="navbar">
+        <div class="container justify-content-center">
 
-                <a href="index.html" class="btn btn-light">Início</a>
-                <a href="Lista.html" class="btn btn-light">Categorias</a>
-                <a href="Indicadores.html" class="btn btn-light">Indicadores</a>
-                <a href="Denuncias.html" class="btn btn-light">Denunciar</a>
-
-            </div>
+            <a href="../Inicio/Inicio.html" class="btn btn-success mx-2">Início</a>
+            <a href="../Lista/Lista.html" class="btn btn-success mx-2">Categorias</a>
+            <a href="../Visualizacao/Indicadores.html" class="btn btn-success mx-2">Indicadores</a>
+            <a href="../Edit/Denuncias.html" class="btn btn-success mx-2">Denunciar</a>
 
         </div>
     </nav>
-    <div class="container">
+    <div class="container lista-card">
         <div class="card">
-            <div class="card-header">
-                Papel e papelão
-            </div>
             <div class="card-body">
                 <h5 class="card-title">Papel e papelão</h5>
                 <p class="card-text">São resíduos feitos de papel, como folhas, jornais, revistas, caixas e embalagens
                     de
                     papelão. Esses materiais podem ser reciclados e transformados em novos produtos de papel.</p>
-                <img src="fabrica_de_software/Meu Ambiente/Imagens/papel.png" class="lixos" alt="papel">
-                <a href="#" class="btn btn-primary">Escolher</a>
+                <a href="fabrica_de_software/meu_ambiente/Edit/Denuncias" class="btn btn-primary">Escolher</a>
             </div>
         </div>
-    </div>
-    <div class="container">
         <div class="card">
-            <div class="card-header">
-                Vidro
-            </div>
             <div class="card-body">
                 <h5 class="card-title">Vidro</h5>
                 <p class="card-text">Inclui materiais feitos de vidro, como garrafas, potes e frascos. O vidro pode ser
                     reciclado várias vezes sem perder sua qualidade.</p>
-                <img src="fabrica_de_software\Meu Ambiente\Imagens\vidro.png" class="lixos" alt="vidro">
                 <a href="#" class="btn btn-primary">Escolher</a>
             </div>
         </div>
-    </div>
-    <div class="container">
         <div class="card">
-            <div class="card-header">
-                Plástico
-            </div>
             <div class="card-body">
                 <h5 class="card-title">Plástico</h5>
                 <p class="card-text">São resíduos feitos de plástico, como garrafas PET, sacolas, embalagens e potes. A
                     reciclagem do plástico ajuda a reduzir a poluição no meio ambiente.</p>
-                <img src="fabrica_de_software\Meu Ambiente\Imagens\plastico.png" class="lixos" alt="plastico">
                 <a href="#" class="btn btn-primary">Escolher</a>
             </div>
         </div>
-    </div>
-    <div class="container">
         <div class="card">
-            <div class="card-header">
-                Metal
-            </div>
             <div class="card-body">
                 <h5 class="card-title">Metal</h5>
                 <p class="card-text">Inclui objetos feitos de metal, como latas de refrigerante, latas de alimentos e
                     tampas
                     metálicas. Esses materiais podem ser reciclados e reutilizados.</p>
-                <img src="fabrica_de_software\Meu Ambiente\Imagens\metal.png" class="lixos" alt="metal">
                 <a href="#" class="btn btn-primary">Escolher</a>
             </div>
         </div>
-    </div>
-    <div class="container">
         <div class="card">
-            <div class="card-header">
-                Madeira
-            </div>
             <div class="card-body">
                 <h5 class="card-title">Madeira</h5>
                 <p class="card-text">Inclui restos de madeira, como pedaços de móveis, tábuas, caixas e serragem.</p>
-                <img src="fabrica_de_software\Meu Ambiente\Imagens\madeira.png" class="lixos" alt="madeira">
                 <a href="#" class="btn btn-primary">Escolher</a>
             </div>
         </div>
-    </div>
-    <div class="container">
         <div class="card">
-            <div class="card-header">
-                Resíduos perigosos
-            </div>
             <div class="card-body">
                 <h5 class="card-title">Resíduos perigosos</h5>
                 <p class="card-text">Inclui materiais que podem causar riscos à saúde ou ao meio ambiente, como pilhas,
                     baterias e produtos químicos.</p>
-                <img src="fabrica_de_software\Meu Ambiente\Imagens\perigosos.png" class="lixos" alt="perigosos">
                 <a href="#" class="btn btn-primary">Escolher</a>
             </div>
         </div>
-    </div>
-    <div class="container">
         <div class="card">
-            <div class="card-header">
-                Resíduos radioativos
-            </div>
             <div class="card-body">
                 <h5 class="card-title">Resíduos radioativos</h5>
                 <p class="card-text">São materiais que emitem radiação, geralmente produzidos em hospitais, laboratórios
                     ou
                     indústrias específicas. Esses resíduos precisam de tratamento especial.</p>
-                <img src="fabrica_de_software\Meu Ambiente\Imagens\radioativos.png" class="lixos" alt="radioativos">
                 <a href="#" class="btn btn-primary">Escolher</a>
             </div>
         </div>
-    </div>
-    <div class="container">
         <div class="card">
-            <div class="card-header">
-                Lixo hospitalar
-            </div>
             <div class="card-body">
                 <h5 class="card-title">Lixo hospitalar</h5>
                 <p class="card-text">São resíduos produzidos em hospitais e clínicas, como luvas, máscaras, seringas e
                     materiais que podem estar contaminados.</p>
-                <img src="fabrica_de_software\Meu Ambiente\Imagens\hospitalar.png" class="lixos" alt="hospitalar">
                 <a href="#" class="btn btn-primary">Escolher</a>
             </div>
         </div>
-    </div>
     </div>
     <footer>
         <div class="container text-center">
